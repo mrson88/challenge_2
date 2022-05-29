@@ -1,7 +1,7 @@
 import 'package:challenge_2/screens/all_widget.dart';
 import 'package:flutter/material.dart';
-import 'screens/home.dart';
-import 'screens/home.dart';
+import 'package:challenge_2/screens/home.dart';
+// import 'package:challenge_2/screens/all_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: HomeScreen(),
+        body: All_Widget(),
       ),
       debugShowCheckedModeBanner: false,
     );

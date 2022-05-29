@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'all_widget.dart';
+import 'package:challenge_2/screens/all_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -48,9 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     ' ${entries[index]}',
                   ),
-                  onPressed: () async {
+                  onPressed: () {
                     if (index == 0) {
-                      await Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
