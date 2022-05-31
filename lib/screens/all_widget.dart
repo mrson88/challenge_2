@@ -7,15 +7,24 @@ class All_Widget extends StatefulWidget {
 }
 
 final List<String> image = <String>[
+  '0',
+  '1',
   '2',
   '3',
   '4',
   '5',
   '6',
 ];
+final List<String> nameperson = [
+  'Herman Pope',
+  'Sue Cadwell',
+  'Ada Reyes',
+  'Haley Dooman'
+];
 
 class _All_WidgetState extends State<All_Widget> {
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -45,6 +54,7 @@ class _All_WidgetState extends State<All_Widget> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xfff20242f),
       body: getbody(context),
@@ -120,16 +130,27 @@ Widget getbody(BuildContext context) {
         Container(
           padding: const EdgeInsets.only(top: 15),
           child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: <Widget>[
-                const Component_1(),
-                const Component_1(),
-                const Component_1(),
-                const Component_1(),
-                const Component_1(),
-                const Component_1(),
-              ],
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: nameperson.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.only(right: 20),
+                  alignment: Alignment.center,
+                  width: 75,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                );
+              },
+              // children: <Widget>[
+              //   const Component_1(),
+              //   const Component_1(),
+              //   const Component_1(),
+              //   const Component_1(),
+              //   const Component_1(),
+              //   const Component_1(),
+              // ],
             ),
           ),
         ),
