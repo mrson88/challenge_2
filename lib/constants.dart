@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const BackgoundColor = Color(0xFFF242A37);
+const backgroundcolor = Color(0xFFF242A37);
 const HeaderCharacter = Color(0xFFFFFFFF);
 const chacrater_mes = TextStyle(fontSize: 17, color: Color(0xFFFFFFFF));
 const chacrater_name = TextStyle(fontSize: 11, color: Color(0xFFFFFFFF));

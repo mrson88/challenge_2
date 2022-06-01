@@ -78,7 +78,7 @@ List personMessages = [
         "https://drive.google.com/uc?export=view&id=1e0ECFl30yxCi-ktnmJHh2wac8tgeWMo9",
     "message": "Hi Tina. How's your night going?",
     "created_at": "06:58PM",
-    "num_mess": "",
+    "num_mess": "4",
   },
   {
     "id": 5,
@@ -96,7 +96,7 @@ List personMessages = [
         "https://photo.wondershare.com/images/en/blog/photo-filter-download-4.jpg",
     "message": "Hey! How's it going?",
     "created_at": "04:04AM",
-    "num_mess": "",
+    "num_mess": "2",
   },
   {
     "id": 7,
@@ -105,7 +105,7 @@ List personMessages = [
         "https://drive.google.com/uc?export=view&id=1GAUlWPxlxJ0UVZgM95_ieQ3tNsNheRPy",
     "message": "What are you doing?",
     "created_at": "03:45AM",
-    "num_mess": "",
+    "num_mess": "1",
   },
   {
     "id": 8,
@@ -135,3 +135,5 @@ List personMessages = [
     "num_mess": "",
   },
 ];
+
+
