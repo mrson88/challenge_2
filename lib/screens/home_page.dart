@@ -1,9 +1,10 @@
 import 'package:challenge_2/constants.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:challenge_2/data/full_data.dart';
 import 'dart:convert';
 import 'package:challenge_2/data/convert_data.dart';
-import 'package:flutter/services.dart' as rootBundle;
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,15 +14,26 @@ class HomePage extends StatefulWidget {
 }
 
 int _selectedIndex = 0;
-Future<List<User>> ReadJsonData() async {
-  final jsonData =
-      await rootBundle.rootBundle.loadString('assets/datas/users.json');
-  final list = json.decode(jsonData) as List<dynamic>;
-  print(list);
-  return list.map((e) => User.fromJson(e)).toList();
-}
 
 class _HomePageState extends State<HomePage> {
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    var userJson = await rootBundle.loadString('assets/datas/users.json');
+    var chatJson = await rootBundle.loadString('assets/datas/chats.json');
+    var decodeUSer = jsonDecode(userJson);
+    var decodeChat = jsonDecode(chatJson);
+
+    var result = decodeUSer['results'];
+    print(result.length);
+    return result;
+
+    // print(result.length);
+  }
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -31,8 +43,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      backgroundColor: const Color(0xFFF20242F),
+      backgroundColor: const Color(0xfff20242f),
       body: getBody(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onItemTapped,
