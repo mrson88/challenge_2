@@ -63,7 +63,7 @@ class _All_WidgetState extends State<All_Widget> {
           BottomNavigationBarItem(
               icon: Icon(Icons.stream),
               label: 'Streams',
-              backgroundColor: navi_color),
+              backgroundColor: naviColor),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
             label: 'Messages',
@@ -103,14 +103,14 @@ Widget getbody(BuildContext context) {
                 onPressed: () => Navigator.pop(context),
                 child: const Icon(
                   Icons.arrow_back,
-                  color: HeaderCharacter,
+                  color: headCharacter,
                 ),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(context),
                 child: const Icon(
                   Icons.add,
-                  color: HeaderCharacter,
+                  color: headCharacter,
                 ),
               ),
             ],
@@ -124,7 +124,7 @@ Widget getbody(BuildContext context) {
             style: TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.normal,
-                color: HeaderCharacter),
+                color: headCharacter),
           ),
         ),
         Container(
@@ -187,7 +187,7 @@ class Component_1 extends StatelessWidget {
         child: Column(
           children: [
             const child_component(),
-            const Text('Mrson', style: chacrater_name),
+            const Text('Mrson', style: charName),
           ],
         ),
       ),
@@ -247,9 +247,9 @@ class Component_2 extends StatelessWidget {
                     children: [
                       const Text(
                         'Herman Pope',
-                        style: chacrater_mes,
+                        style: charMes,
                       ),
-                      const Text("Hey! How' it going?", style: chacrater_mes),
+                      const Text("Hey! How' it going?", style: charMes),
                       Container(
                         margin: const EdgeInsets.only(top: 21.5),
                         height: 1,
@@ -267,7 +267,7 @@ class Component_2 extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16),
                 child: const Text(
                   '4:49PM',
-                  style: hour_color,
+                  style: hourColor,
                 ),
               ),
             ],

@@ -3,7 +3,7 @@
 import 'package:flutter/services.dart';
 import 'dart:convert';
 
-var userJson = rootBundle.loadString('assets/datas/users.json');
+var userJson = rootBundle.loadString('assets/data/users.json');
 
 Welcome welcomeFromJson(String userJson) =>
     Welcome.fromJson(json.decode(userJson));

@@ -1,3 +1,4 @@
+import 'package:challenge_2/constants.dart';
 import 'package:challenge_2/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: backgroundColor,
         body: HomePage(),
       ),
       debugShowCheckedModeBanner: false,

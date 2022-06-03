@@ -32,6 +32,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  get_it: ^7.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -43,7 +44,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/datas/
+    - assets/data/
     - assets/icons/
             
   fonts:
